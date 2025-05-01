@@ -199,3 +199,11 @@ endpoints:
 #   avatarSizeLimit: 2  # 用户头像图片大小限制（MB）
 # # 有关 Assistants Config 的更多信息，请参阅自定义配置指南：
 # # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
+
+fileConfig:
+  endpoints:
+      assistants:
+          totalSizeLimit: 50  # 单个请求中所有文件的最大总大小（MB）
+          supportedMimeTypes:
+            - "image/.*"
+            - "application/pdf"
