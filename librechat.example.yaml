@@ -176,7 +176,7 @@ endpoints:
       titleModel: 'deepseek-ai/DeepSeek-V3-0324'
       summarize: true
       summaryModel: 'deepseek-ai/DeepSeek-V3-0324'
-      modelDisplayLabel: 'AI'
+      modelDisplayLabel: '永康 AI'
       iconURL: 'https://music.ack20.eu.org/images/icons/android-chrome-192x192.png'
 # fileConfig:
 #   endpoints:
