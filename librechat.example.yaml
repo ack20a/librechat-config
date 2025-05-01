@@ -12,6 +12,7 @@ cache: true
 
 # 自定义界面配置
 interface:
+  runCode: false
   customWelcome: "永康 AI Web，现已全新升级"
   # 隐私政策设置
   privacyPolicy:
