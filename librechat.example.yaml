@@ -1,0 +1,201 @@
+# 更多信息，请参阅配置指南：
+# https://www.librechat.ai/docs/configuration/librechat_yaml
+
+# 配置版本（必填）
+version: 1.2.4
+
+# 缓存设置：设置为 true 以启用缓存
+cache: true
+
+# 文件策略 s3/firebase
+# fileStrategy: "s3"
+
+# 自定义界面配置
+interface:
+  customWelcome: "永康 AI Web，现已全新升级"
+  # 隐私政策设置
+  privacyPolicy:
+    externalUrl: 'https://ai.ack20.eu.org'
+    openNewTab: true
+
+  # 服务条款
+  termsOfService:
+    externalUrl: 'https://ai.ack20.eu.org'
+    openNewTab: true
+    modalAcceptance: true
+    modalTitle: "Terms of Service for 永康 AI Web"
+    modalContent: |
+      # Terms and Conditions for 永康 AI Web
+
+      *Effective Date: February 18, 2024*
+
+      Welcome to 永康 AI Web, the informational website for the open-source AI chat platform, available at https://next.ack20.eu.org. These Terms of Service ("Terms") govern your use of our website and the services we offer. By accessing or using the Website, you agree to be bound by these Terms and our Privacy Policy, accessible at https://ai.ack20.eu.org.
+
+      ## 1. Ownership
+
+      Upon purchasing a package from 永康 AI Web, you are granted the right to download and use the code for accessing an admin panel for 永康 AI Web. While you own the downloaded code, you are expressly prohibited from reselling, redistributing, or otherwise transferring the code to third parties without explicit permission from 永康 AI Web.
+
+      ## 2. User Data
+
+      We collect personal data, such as your name, email address, and payment information, as described in our Privacy Policy. This information is collected to provide and improve our services, process transactions, and communicate with you.
+
+      ## 3. Non-Personal Data Collection
+
+      The Website uses cookies to enhance user experience, analyze site usage, and facilitate certain functionalities. By using the Website, you consent to the use of cookies in accordance with our Privacy Policy.
+
+      ## 4. Use of the Website
+
+      You agree to use the Website only for lawful purposes and in a manner that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the Website. Prohibited behavior includes harassing or causing distress or inconvenience to any person, transmitting obscene or offensive content, or disrupting the normal flow of dialogue within the Website.
+
+      ## 5. Governing Law
+
+      These Terms shall be governed by and construed in accordance with the laws of the United States, without giving effect to any principles of conflicts of law.
+
+      ## 6. Changes to the Terms
+
+      We reserve the right to modify these Terms at any time. We will notify users of any changes by email. Your continued use of the Website after such changes have been notified will constitute your consent to such changes.
+
+      ## 7. Contact Information
+
+      If you have any questions about these Terms, please contact us at ack20a@gmail.com.
+
+      By using the Website, you acknowledge that you have read these Terms of Service and agree to be bound by them.
+
+  endpointsMenu: true
+  modelSelect: true
+  parameters: true
+  sidePanel: true
+  presets: true
+  prompts: true
+  bookmarks: true
+  multiConvo: true
+  agents: true
+# 示例注册对象结构（可选）
+registration:
+  socialLogins: ['github', 'google', 'discord', 'openid', 'facebook', 'apple']
+  # allowedDomains:
+  # - "gmail.com"
+
+
+# 示例余额设置
+# balance:
+#   enabled: false
+#   startBalance: 20000
+#   autoRefillEnabled: false
+#   refillIntervalValue: 30
+#   refillIntervalUnit: 'days'
+#   refillAmount: 10000
+
+# 语音设置
+# speech:
+#   tts:
+#     openai:
+#       url: ''
+#       apiKey: '${TTS_API_KEY}'
+#       model: ''
+#       voices: ['']
+
+#
+#   stt:
+#     openai:
+#       url: ''
+#       apiKey: '${STT_API_KEY}'
+#       model: ''
+
+# 速率限制
+# rateLimits:
+#   fileUploads:
+#     ipMax: 100
+#     ipWindowInMinutes: 60  # 每个 IP 的文件上传速率限制窗口（分钟）
+#     userMax: 50
+#     userWindowInMinutes: 60  # 每个用户的的文件上传速率限制窗口（分钟）
+#   conversationsImport:
+#     ipMax: 100
+#     ipWindowInMinutes: 60  # 每个 IP 的会话导入速率限制窗口（分钟）
+#     userMax: 50
+#     userWindowInMinutes: 60  # 每个用户的会话导入速率限制窗口（分钟）
+
+# 示例 Actions 对象结构
+actions:
+  allowedDomains:
+    - "swapi.dev"
+    - "librechat.ai"
+    - "google.com"
+
+# 示例 MCP 服务器对象结构
+# mcpServers:
+#   everything:
+#     # type: sse # type can optionally be omitted
+#     url: http://localhost:3001/sse
+#     timeout: 60000  # 此服务器的超时时间为 1 分钟，这是 MCP 服务器的默认超时时间。
+#   puppeteer:
+#     type: stdio
+#     command: npx
+#     args:
+#       - -y
+#       - "@modelcontextprotocol/server-puppeteer"
+#     timeout: 300000  # 此服务器的超时时间为 5 分钟
+#   filesystem:
+#     # type: stdio
+#     command: npx
+#     args:
+#       - -y
+#       - "@modelcontextprotocol/server-filesystem"
+#       - /home/user/LibreChat/
+#     iconPath: /home/user/LibreChat/client/public/assets/logo.svg
+#   mcp-obsidian:
+#     command: npx
+#     args:
+#       - -y
+#       - "mcp-obsidian"
+#       - /path/to/obsidian/vault
+
+# 自定义端点的定义
+endpoints:
+  custom:
+    # 永康 API
+    - name: '永康 API'
+      apiKey: '${YK_API_KEY}'
+      baseURL: 'https://one-api.ack20.eu.org/v1/'
+      models:
+        default:
+          [
+            'deepseek-ai/DeepSeek-Prover-V2-671B',
+            'deepseek-ai/DeepSeek-R1',
+            'deepseek-ai/DeepSeek-V3-0324',
+            'deepseek-reasoner',
+            'flux',
+            'gemini-2.5-flash-preview-04-17',
+            'gemini-2.5-pro-preview-03-25',
+            'nyk-dsr1',
+            'Qwen/Qwen3-235B-A22B',
+            'Qwen/QwQ-32B',
+            'unsloth/gemma-3-27b-it',
+          ]
+        fetch: false
+      titleConvo: true
+      titleModel: 'deepseek-ai/DeepSeek-V3-0324'
+      summarize: true
+      summaryModel: 'deepseek-ai/DeepSeek-V3-0324'
+      modelDisplayLabel: 'AI'
+      iconURL: 'https://music.ack20.eu.org/images/icons/android-chrome-192x192.png'
+# fileConfig:
+#   endpoints:
+#     assistants:
+#       fileLimit: 5
+#       fileSizeLimit: 10  # 单个文件的最大大小（MB）
+#       totalSizeLimit: 50  # 单个请求中所有文件的最大总大小（MB）
+#       supportedMimeTypes:
+#         - "image/.*"
+#         - "application/pdf"
+#     openAI:
+#       disabled: true  # 禁用文件上传到 OpenAI 端点
+#     default:
+#       totalSizeLimit: 20
+#     YourCustomEndpointName:
+#       fileLimit: 2
+#       fileSizeLimit: 5
+#   serverFileSizeLimit: 100  # 全局服务器文件大小限制（MB）
+#   avatarSizeLimit: 2  # 用户头像图片大小限制（MB）
+# # 有关 Assistants Config 的更多信息，请参阅自定义配置指南：
+# # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
