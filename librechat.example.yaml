@@ -70,7 +70,7 @@ interface:
   prompts: true
   bookmarks: true
   multiConvo: true
-  agents: false
+  agents: true
 # 示例注册对象结构（可选）
 registration:
   socialLogins: ['github', 'google', 'discord', 'openid', 'facebook', 'apple']
@@ -91,7 +91,7 @@ registration:
 speech:
   tts:
     openai:
-      url: 'https://minimax-free-api-ds4156ad465a.onrender.com/v1/'
+      url: 'https://minimax-free-api-ds4156ad465a.onrender.com/v1/audio/speech'
       apiKey: '${TTS_API_KEY}'
       model: 'tts-1-hd'
       voices: ['alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer']
@@ -99,7 +99,7 @@ speech:
 
   stt:
     openai:
-      url: 'https://api.groq.com/openai/v1/'
+      url: 'https://api.groq.com/openai/v1/audio/transcriptions'
       apiKey: '${STT_API_KEY}'
       model: 'whisper-large-v3-turbo'
 
