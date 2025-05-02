@@ -200,9 +200,5 @@ endpoints:
 # # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
 
 fileConfig:
-  endpoints:
-      assistants:
-          totalSizeLimit: 50  # 单个请求中所有文件的最大总大小（MB）
-          supportedMimeTypes:
-            - "image/.*"
-            - "application/pdf"
+  serverFileSizeLimit: 10  # 全局服务器文件大小限制（MB）
+  avatarSizeLimit: 10  # 用户头像图片大小限制（MB）
