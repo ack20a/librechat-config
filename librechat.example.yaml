@@ -163,13 +163,13 @@ endpoints:
           [
             'deepseek-ai/DeepSeek-R1',
             'deepseek-ai/DeepSeek-V3-0324',
-            'flux',
             'gemini-2.5-flash-preview-04-17',
             'gemini-2.5-pro-exp-03-25',
-            'nyk-dsr1',
             'Qwen/Qwen3-235B-A22B',
-            'unsloth/gemma-3-27b-it',
-            'microsoft/Phi-4-reasoning-plus',
+            'nvidia/Llama-3_1-Nemotron-Ultra-253B-v1',
+            'deepseek-ai/DeepSeek-Prover-V2-671B',
+            'flux',
+            'nyk-dsr1',
           ]
         fetch: false
       titleConvo: true
