@@ -70,7 +70,7 @@ interface:
   prompts: true
   bookmarks: true
   multiConvo: true
-  agents: false
+  agents: true
 # 示例注册对象结构（可选）
 registration:
   socialLogins: ['github', 'google', 'discord', 'openid', 'facebook', 'apple']
