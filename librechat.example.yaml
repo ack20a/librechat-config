@@ -172,6 +172,7 @@ endpoints:
              'Qwen/Qwen2.5-Coder-32B-Instruct',
              'NousResearch/DeepHermes-3-Llama-3-8B-Preview',
              'open-r1/OlympicCoder-32B',
+             'gemini-2.5-pro-exp-03-25',
              'flux',
              'nyk-dsr1',
            ]
